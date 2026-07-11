@@ -1,0 +1,251 @@
+/* ============ LANCER 中文資料庫 全站樣式 ============ */
+:root {
+  --bg: #10141c;
+  --bg-panel: #1a2130;
+  --bg-panel-2: #212a3d;
+  --border: #32405c;
+  --text: #dbe4f0;
+  --text-dim: #8a99b5;
+  --accent: #ffb454;
+  --accent-2: #5ec8e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 64px;
+}
+
+/* ---- 頁首 ---- */
+.site-header {
+  border-bottom: 2px solid var(--accent);
+  background: var(--bg-panel);
+  padding: 12px 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.site-title span {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  margin-left: 8px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.site-nav a {
+  color: var(--text);
+  padding: 2px 4px;
+}
+
+.site-nav a.router-link-active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ---- 頁尾 ---- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+/* ---- 通用元件 ---- */
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 1px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  margin-right: 6px;
+}
+
+.tag.accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+h1 {
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+h2 {
+  color: var(--accent-2);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  margin-top: 32px;
+}
+
+.subtitle {
+  color: var(--text-dim);
+  margin-top: 0;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  margin: 16px 0;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ---- 機甲卡片列表 ---- */
+.manufacturer-block {
+  margin-top: 28px;
+}
+
+.manufacturer-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.manufacturer-name small {
+  color: var(--text-dim);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.frame-card {
+  display: block;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--mfr-color, var(--border));
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--text);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.frame-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.frame-card .en-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.frame-card .zh-name {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.frame-card .meta {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+/* ---- 機甲詳細頁 ---- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.stat-cell {
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.stat-cell .label {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  display: block;
+}
+
+.stat-cell .value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.desc {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.desc ul {
+  padding-left: 1.4em;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--text-dim);
+}
+
+.untranslated-note {
+  background: #3a2d1a;
+  border: 1px solid #6b5528;
+  color: #e8c88a;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  margin: 12px 0;
+}

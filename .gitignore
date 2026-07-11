@@ -1,0 +1,12 @@
+# 規則書 PDF（受版權內容，不上傳）
+*.pdf
+
+# 相依套件
+node_modules/
+
+# 建置輸出
+dist/
+
+# 本機設定
+.claude/
+.DS_Store
