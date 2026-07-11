@@ -7,10 +7,13 @@ import framesRaw from 'lancer-data/lib/frames.json'
 import zhFrames from './zh/frames.zh.json'
 
 function mergeFrame(frame, zh) {
-  if (!zh) return { ...frame, zhName: null, translated: false }
+  if (!zh) return { ...frame, zhName: null, rulesTranslated: false, fullyTranslated: false }
   return {
     ...frame,
-    translated: true,
+    // rulesTranslated：特性與核心系統翻完（跑團查規則夠用）
+    // fullyTranslated：連背景描述也翻完
+    rulesTranslated: Boolean(zh.traits && zh.core_system),
+    fullyTranslated: Boolean(zh.traits && zh.core_system && zh.description),
     zhName: zh.name ?? null,
     description: zh.description ?? frame.description,
     traits: (frame.traits ?? []).map((t, i) => ({ ...t, ...(zh.traits?.[i] ?? {}) })),

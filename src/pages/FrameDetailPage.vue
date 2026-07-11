@@ -45,8 +45,8 @@ const statOrder = [
       · {{ licenseLabel(frame.license_level) }}
     </p>
 
-    <div v-if="!frame.translated" class="untranslated-note">
-      ⚠ 這台機體尚未翻譯，以下顯示英文原文。
+    <div v-if="!frame.fullyTranslated" class="untranslated-note">
+      ⚠ 這台機體尚未完全翻譯，未翻譯的部分顯示英文原文。
     </div>
 
     <h2>機體數值</h2>

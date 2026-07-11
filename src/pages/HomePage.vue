@@ -1,7 +1,8 @@
 <script setup>
 import { frames } from '../data/index.js'
 
-const translatedCount = frames.filter((f) => f.translated).length
+const rulesCount = frames.filter((f) => f.rulesTranslated).length
+const fullCount = frames.filter((f) => f.fullyTranslated).length
 </script>
 
 <template>
@@ -22,8 +23,9 @@ const translatedCount = frames.filter((f) => f.translated).length
   <div class="panel">
     <strong>翻譯進度</strong>
     <p>
-      機甲框架：{{ translatedCount }} / {{ frames.length }} 台已翻譯。
-      尚未翻譯的條目會先顯示英文原文，翻譯將持續更新。
+      機甲框架：{{ rulesCount }} / {{ frames.length }} 台規則已翻譯（其中
+      {{ fullCount }} 台連同背景描述完整翻譯）。
+      尚未翻譯的內容會先顯示英文原文，翻譯將持續更新。
     </p>
   </div>
 </template>
