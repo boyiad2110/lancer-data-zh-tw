@@ -4,7 +4,11 @@
 // 還沒翻譯的條目會自動顯示英文原文，網站不會開天窗。
 // ============================================================
 import framesRaw from 'lancer-data/lib/frames.json'
+import backgroundsRaw from 'lancer-data/lib/backgrounds.json'
+import skillsRaw from 'lancer-data/lib/skills.json'
 import zhFrames from './zh/frames.zh.json'
+import zhBackgrounds from './zh/backgrounds.zh.json'
+import zhSkills from './zh/skills.zh.json'
 
 function mergeFrame(frame, zh) {
   if (!zh) return { ...frame, zhName: null, rulesTranslated: false, fullyTranslated: false }
@@ -28,3 +32,15 @@ export const frames = framesRaw
 export function getFrame(id) {
   return frames.find((f) => f.id === id)
 }
+
+// 通用合併：zh 檔裡同名欄位覆蓋英文原文，保留英文名到 enName
+function mergeSimple(list, zhMap) {
+  return list.map((item) => {
+    const zh = zhMap[item.id]
+    if (!zh) return { ...item, enName: item.name, translated: false }
+    return { ...item, ...zh, enName: item.name, translated: true }
+  })
+}
+
+export const backgrounds = mergeSimple(backgroundsRaw, zhBackgrounds)
+export const skills = mergeSimple(skillsRaw, zhSkills)

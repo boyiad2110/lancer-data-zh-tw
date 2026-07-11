@@ -72,6 +72,14 @@ export const USES = {
   Mission: '每次任務 1 次',
 }
 
+// 技能觸發分類（COMP/CON 的內部分組）
+export const SKILL_FAMILIES = {
+  str: '武力',
+  dex: '身手',
+  int: '頭腦',
+  cha: '口才',
+}
+
 // 授權等級顯示
 export function licenseLabel(level) {
   return level === 0 ? '基礎裝備' : `授權等級 ${level}`
