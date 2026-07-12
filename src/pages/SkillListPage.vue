@@ -16,10 +16,10 @@ const grouped = computed(() =>
 </script>
 
 <template>
-  <h1>技能觸發</h1>
+  <h1>本領</h1>
   <p class="subtitle">
-    創角時選 4 個技能觸發（各 +2）。駕駛員做規則沒有明確涵蓋的事情時，
-    符合的技能觸發可以加到你的檢定上。點開每個項目可看完整說明。
+    創角時選 4 個本領（各 +2）。機師做規則沒有明確涵蓋的事情時，
+    符合的本領可以加到你的能力檢定上。點開每個項目可看完整說明。
   </p>
 
   <div v-for="group in grouped" :key="group.key">

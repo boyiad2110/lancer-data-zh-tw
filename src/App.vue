@@ -7,7 +7,7 @@
       <RouterLink to="/">首頁</RouterLink>
       <RouterLink to="/frames">機甲框架</RouterLink>
       <RouterLink to="/backgrounds">玩家背景</RouterLink>
-      <RouterLink to="/skills">技能觸發</RouterLink>
+      <RouterLink to="/skills">本領</RouterLink>
     </nav>
   </header>
 

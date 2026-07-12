@@ -9,16 +9,16 @@ export const STAT_LABELS = {
   structure: '結構值',
   stress: '應力值',
   armor: '裝甲',
-  hp: '生命值',
+  hp: '生命',
   evasion: '迴避',
-  edef: '電子防禦',
+  edef: '電防',
   heatcap: '熱容量',
   repcap: '修理值',
   sensor_range: '感測範圍',
   tech_attack: '科技攻擊',
-  save: '豁免目標值',
+  save: '豁免',
   speed: '速度',
-  sp: '系統點數',
+  sp: 'SP',
 }
 
 // 機體定位
@@ -44,10 +44,10 @@ export const MOUNTS = {
 // 製造商
 export const MANUFACTURERS = {
   GMS: { abbr: 'GMS', name: '通用量產系統', fullName: 'General Massive Systems', color: '#9ec1cf' },
-  'IPS-N': { abbr: 'IPS-N', name: 'IPS-北極星', fullName: 'Interplanetary Shipping-Northstar', color: '#e05d44' },
-  SSC: { abbr: 'SSC', name: '史密斯-島野企業', fullName: 'Smith-Shimano Corpro', color: '#e6b422' },
+  'IPS-N': { abbr: 'IPS-N', name: '極星航運', fullName: 'Interplanetary Shipping-Northstar', color: '#e05d44' },
+  SSC: { abbr: 'SSC', name: '史島生技', fullName: 'Smith-Shimano Corpro', color: '#e6b422' },
   HORUS: { abbr: 'HORUS', name: '荷魯斯', fullName: 'HORUS', color: '#7bc96f' },
-  HA: { abbr: 'HA', name: '哈里遜軍工', fullName: 'Harrison Armory', color: '#b78ee0' },
+  HA: { abbr: 'HA', name: '哈里森軍工', fullName: 'Harrison Armory', color: '#b78ee0' },
 }
 
 // 系統啟動方式
@@ -55,7 +55,7 @@ export const ACTIVATIONS = {
   Protocol: '協定',
   Quick: '快速動作',
   Full: '完整動作',
-  Free: '自由動作',
+  Free: '免費動作',
   Reaction: '反應',
   'Quick Tech': '快速科技',
   'Full Tech': '完整科技',
@@ -72,12 +72,12 @@ export const USES = {
   Mission: '每次任務 1 次',
 }
 
-// 技能觸發分類（COMP/CON 的內部分組）
+// 本領分類（COMP/CON 的內部分組）
 export const SKILL_FAMILIES = {
-  str: '武力',
-  dex: '身手',
-  int: '頭腦',
-  cha: '口才',
+  str: '力量',
+  dex: '敏捷',
+  int: '智力',
+  cha: '魅力',
 }
 
 // 授權等級顯示

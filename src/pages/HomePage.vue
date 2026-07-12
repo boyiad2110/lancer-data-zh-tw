@@ -12,7 +12,7 @@ const fullCount = frames.filter((f) => f.fullyTranslated).length
   <div class="panel">
     <p>
       在遙遠的未來，人類跨越星海重新聯合。你是一名「持槍騎兵」（Lancer）——
-      駕駛機甲的菁英駕駛員。這裡收錄了《LANCER》核心規則書中的機體與裝備資料，
+      駕駛機甲的菁英機師。這裡收錄了《LANCER》核心規則書中的機體與裝備資料，
       供中文玩家快速查閱。
     </p>
     <p>
